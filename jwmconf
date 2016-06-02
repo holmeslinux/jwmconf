@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#  updated on 18.01.2016 19:45:49
-#  version 0.1-1
+#  updated on 14.05.2016 09:45:49
+#  version 0.1-2
 
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -39,10 +39,10 @@ JWMconf is an interactive configure JWM for your command line terminal. It provi
 
 HOME SCREEN
 JWMConf Configuration Tool's home screen is split into two parts: 
-The upper part focuses on JWM files. Also has some important options for maintenance of JWM. The lower part provides options to edit other settings files: Conky, Dunst, Gmrun, Bashrc, GTK2, GTK3, Xresources, LXDM and Oblogout. Choose an option by entering its number and pressing [Enter].
+The upper part focuses on JWM files. Also has some important options for maintenance of JWM. The lower part provides options to edit other settings files: Conky, Dunst, Gmrun, Bashrc, GTK2, GTK3, Xresources, LightDM and Oblogout. Choose an option by entering its number and pressing [Enter].
 
 ATTENTION
-*The number 19, 20, 21, 22 and 23 can break your system. WARNING! USE WITH CAUTION.
+*The number 7, 8, 9, 10, 11, 12, 13, 14, 19, 20, 21, 22 and 23 can break your system. WARNING! USE WITH CAUTION.
 
 0 - EXIT JWMCONF
 "clear && exit"
@@ -64,28 +64,28 @@ Reload menu by sending _JWM_RELOAD to the root window.
 To check the JWM configuration and return syntax errors (including associated line numbers).
 
 4- EDIT MENU JWM
-This option is to edit the Menu settings (in ~/.jwm/menu). To edit the Menu is used medit editor.
+This option is to edit the Menu settings (in ~/.jwm/menu). To edit the Menu is used leafpad editor.
 
 5- EDIT TRAY JWM
-This option is to edit the Tray settings (in ~/.jwm/tray). To edit the Tray is used medit editor.
+This option is to edit the Tray settings (in ~/.jwm/tray). To edit the Tray is used leafpad editor.
 
 6- EDIT START JWM
-This option is to edit the Start settings (in ~/.jwm/start). To edit the Start is used medit editor.
+This option is to edit the Start settings (in ~/.jwm/start). To edit the Start is used leafpad editor.
 
 7- EDIT THEME JWM
-This option is to edit the Theme settings (in ~/.jwm/theme). To edit the Theme is used medit editor.
+This option is to edit the Theme settings (in ~/.jwm/theme). To edit the Theme is used leafpad editor.
 
 8- EDIT KEYS JWM
-This option is to edit the Keys settings (in ~/.jwm/keys). To edit the Keys is used medit editor.
+This option is to edit the Keys settings (in ~/.jwm/keys). To edit the Keys is used leafpad editor.
 
 9- EDIT GROUPS JWM
-This option is to edit the Groups settings (in ~/.jwm/groups). To edit the Groups is used medit editor.
+This option is to edit the Groups settings (in ~/.jwm/groups). To edit the Groups is used leafpad editor.
 
 10- EDIT PREFERENCES JWM
-This option is to edit the Preferences settings (in ~/.jwm/preferences). To edit the Preferences is used medit editor.
+This option is to edit the Preferences settings (in ~/.jwm/preferences). To edit the Preferences is used leafpad editor.
 
 11- EDIT JWMRC
-This option is to edit the jwmrc settings (in ~/.jwmrc). To edit the jwmrc is used medit editor.
+This option is to edit the jwmrc settings (in ~/.jwmrc). To edit the jwmrc is used leafpad editor.
 
 12- COMMANDS MANUAL JWM
 General commands manual of the Joe's Window Manager (JWM). JWM is a window manager for X11 Window System.
@@ -99,15 +99,15 @@ Visit and know the website of JWM.
 
 15- EDIT CONKY
 Conky a lightweight system monitor.
-This option is to edit the Conky settings ((in ~/.conkyrc). To edit the Conky is used medit editor.
+This option is to edit the Conky settings ((in ~/.conkyrc). To edit the Conky is used leafpad editor.
 
 16- EDIT DUNST
 Dunst is a lightweight replacement for the notification-daemons provided by most desktop environments.
-This option is to edit the Dunst settings (in ~/.config/dunst/dunstrc). To edit the Dunst is used medit editor.
+This option is to edit the Dunst settings (in ~/.config/dunst/dunstrc). To edit the Dunst is used leafpad editor.
 
 17- EDIT GMRUN
 Gmrun (Gnome Completion-Run) is an lightweight application launcher similar to GNOME Run, Application Finder, KRunner, etc. 
-This option is to edit the Gmrun settings (in ~/.gmrunrc). To edit the Gmrun is used medit editor.
+This option is to edit the Gmrun settings (in ~/.gmrunrc). To edit the Gmrun is used leafpad editor.
 
 18- EDIT BASHRC
 Bash (Bourne-again Shell) is a command-line shell/programming language by the GNU Project.
@@ -121,8 +121,8 @@ GTK+, or the GIMP Toolkit, is a multi-platform toolkit for creating graphical us
 21- EDIT XRESOURCES
 Xresources is a user-level configuration dotfile, typically located at ~/.Xresources.
 
-22- EDIT LXDM
-LXDM is a lightweight display manager for the LXDE desktop environment. The UI is implemented with GTK+ 2.
+22- EDIT LightDM
+LightDM is a cross-desktop display manager. A display manager is a daemon that: runs display servers (e.g. X) where necessary, runs greeters to allow users to pick which user account and session type to use, etc.
 
 23- EDIT OBLOGOUT
 Oblogout is an optional, configurable logout script that presents a graphical interface (i.e. buttons) to cancel, logout, restart, shutdown, suspend.
@@ -144,19 +144,21 @@ NC='\e[0m'
     echo -e "                      $NC ::WARNING! USE WITH CAUTION:: $NC"
     echo -e " ┌─────────────────────────────────────────────────────────────────────────┐"
     echo -e " │  $NC  1  $NC  Refresh Configuration JWM          $NC  2  $NC  Refresh Menu JWM      │"
-    echo -e " │  $NC  3  $NC  Check Error JWM                    $NC  4  $NC  Edit Menu JWM         │"
-    echo -e " │  $NC  5  $NC  Edit Tray JWM                      $NC  6  $NC  Edit Start JWM        │"
-    echo -e " │  $NC  7  $NC  Edit Theme JWM                     $NC  8  $NC  Edit Keys JWM         │"
-    echo -e " │  $NC  9  $NC  Edit Groups JWM                    $NC 10  $NC  Edit Preferences JWM  │"
-    echo -e " │  $NC 11  $NC  Edit jwmrc                         $NC 12  $NC  Commands Manual JWM   │"
-    echo -e " │  $NC 13  $NC  Version JWM                        $NC 14  $NC  Homepage JWM          │"
-    echo " └─────────────────────────────────────────────────────────────────────────┘" 
+    echo -e " │  $NC  3  $NC  Check Error JWM                    $NC  4  $NC  Homepage JWM          │"
+    echo -e " │  $NC  5  $NC  Commands Manual JWM                $NC  6  $NC  Version JWM           │"
+    echo -e " │-------------------------------------------------------------------------│"
+    echo -e " │  $NC  7  $NC *Edit Tray JWM                      $NC  8  $NC *Edit Start JWM        │"
+    echo -e " │  $NC  9  $NC *Edit Theme JWM                     $NC 10  $NC *Edit Keys JWM         │"
+    echo -e " │  $NC 11  $NC *Edit Groups JWM                    $NC 12  $NC *Edit Preferences JWM  │"
+    echo -e " │  $NC 13  $NC *Edit Menu JWM                      $NC 14  $NC *Edit jwmrc            │"
+       echo " └─────────────────────────────────────────────────────────────────────────┘" 
     echo ""
     echo " ┌─────────────────────────────────────────────────────────────────────────┐"
     echo -e " │  $NC 15  $NC  Edit Conky                         $NC 16  $NC  Edit Dunst            │"
     echo -e " │  $NC 17  $NC  Edit Gmrun                         $NC 18  $NC  Edit Bashrc           │"
+    echo -e " │-------------------------------------------------------------------------│"
     echo -e " │  $NC 19  $NC *Edit GTK2              	      $NC 20  $NC *Edit GTK3             │"
-    echo -e " │  $NC 21  $NC *Edit Xresources 	              $NC 22  $NC *Edit LXDM             │"
+    echo -e " │  $NC 21  $NC *Edit Xresources 	              $NC 22  $NC *Edit LightDM          │"
     echo -e " │  $NC 23  $NC *Edit Oblogout			                           │"
     echo " └─────────────────────────────────────────────────────────────────────────┘"
     echo ""
@@ -185,148 +187,146 @@ NC='\e[0m'
             echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
             read
             ;;
-        4)
-            echo
-            medit ~/.jwm/menu
-            echo ""
-            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
-            read
-            ;;
-        5)
-            echo
-            medit ~/.jwm/tray
-            echo ""
-            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
-            read
-            ;;
-        6)
-            echo ""
-            medit ~/.jwm/start
-            echo ""
-            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
-            read
-            ;;
-        7)
-            echo ""
-            medit ~/.jwm/theme
-            echo ""
-            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
-            read 
-            ;;
-        8)
-            echo ""
-            medit ~/.jwm/keys
-            echo ""
-            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
-            read
-            ;;
-        9)
-            echo ""
-            medit ~/.jwm/groups
-            echo ""
-            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
-            read
-            ;;
-        10)
-            echo ""
-            medit ~/.jwm/preferences
-            echo ""
-            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
-            read
-            ;;
-        11)
-            echo ""
-            medit ~/.jwmrc
-            echo ""
-            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
-            read
-            ;;
-        12)
-            echo ""
-            man jwm
-            echo ""
-            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
-            read
-            ;;
-        13)
-            echo
-            jwm -v
-            echo ""
-            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
-            read
-            ;;
-        14)
+	4)
             echo
             elinks http://joewing.net/projects/jwm/index.shtml
             echo ""
             echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
             read
             ;;
+	5)
+            echo ""
+            man jwm
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+	6)
+            echo
+            jwm -v
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+	7)
+            echo
+            leafpad ~/.jwm/tray
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+	8)
+            echo ""
+            leafpad ~/.jwm/start
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+	9)
+            echo ""
+            leafpad ~/.jwm/theme
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read 
+            ;;
+	10)
+            echo ""
+            leafpad ~/.jwm/keys
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+	11)
+            echo ""
+            leafpad ~/.jwm/groups
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+	12)
+            echo ""
+            leafpad ~/.jwm/preferences
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+	13)
+            echo
+            leafpad ~/.jwm/menu
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+	14)
+            echo ""
+            leafpad ~/.jwmrc
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;        
         15)
             echo ""
-            medit ~/.conkyrc
+            leafpad ~/.conkyrc
             echo ""
             echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
             read
             ;;
         16)
             echo ""
-            medit ~/.config/dunst/dunstrc
+            leafpad ~/.config/dunst/dunstrc
             echo ""
             echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
             read
             ;;
         17)
             echo ""
-            medit ~/.gmrunrc
+            leafpad ~/.gmrunrc
             echo ""
             echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
             read
             ;;
         18)
             echo ""
-            medit $HOME/.bashrc
+            leafpad $HOME/.bashrc
             echo ""
             echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
             read
             ;;
-
 	19)
             echo ""
-            medit $HOME/.gtkrc-2.0
+            leafpad $HOME/.gtkrc-2.0
             echo ""
             echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
             read
             ;;
 	20)
             echo ""
-            medit $HOME/.config/gtk-3.0/settings.ini
+            leafpad $HOME/.config/gtk-3.0/settings.ini
             echo ""
             echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
             read
             ;;	
 	21)
             echo ""
-            medit $HOME/.Xresources
+            leafpad $HOME/.Xresources
             echo ""
             echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
             read
             ;;
 	22)
             echo ""
-            sudo medit /etc/lxdm/lxdm.conf
+            sudo leafpad /etc/lightdm/lightdm-gtk-greeter.conf
             echo ""
             echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
             read
             ;;
 	23)
             echo ""
-            sudo medit /etc/oblogout.conf
+            sudo leafpad /etc/oblogout.conf
             echo ""
             echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
             read
             ;;
-
         0)
             clear && exit
             read
